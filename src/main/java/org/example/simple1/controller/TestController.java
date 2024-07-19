@@ -1,6 +1,5 @@
 package org.example.simple1.controller;
 
-import org.example.simple1.dto.MemberDto;
 import org.example.simple1.entity.Member;
 import org.example.simple1.repository.MemberRepository;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -19,6 +18,8 @@ public class TestController {
 
     @GetMapping("/")
     public Member test() {
-        return memberRepository.save(new Member(1L, "hwayeon"));
+        Member m = new Member( "hwayeon");
+        memberRepository.save(m);
+        return m;
     }
 }

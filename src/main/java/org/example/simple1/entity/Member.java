@@ -16,8 +16,7 @@ public class Member {
 
     private String name;
 
-    public Member(Long id, String name) {
-        this.id = id;
+    public Member(String name) {
         this.name = name;
     }
 }
