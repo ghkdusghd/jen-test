@@ -1,11 +1,9 @@
 package org.example.simple1.dto;
 
-import jakarta.persistence.Entity;
 import lombok.Data;
 
 @Data
 public class MemberDto {
-
     private String name;
     private int age;
 
