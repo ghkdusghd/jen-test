@@ -11,7 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin(origins = "*")
 public class TestController {
 
-    private MemberRepository memberRepository;
+    private final MemberRepository memberRepository;
+
+    public TestController(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     @GetMapping("/")
     public Member test() {
